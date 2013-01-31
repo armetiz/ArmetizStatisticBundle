@@ -1,0 +1,29 @@
+{
+    "name": "armetiz/statistic-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony ArmetizStatisticBundle",
+    "keywords": ["Armetiz", "Statistic"],
+    "homepage": "",
+    "license": "",
+    "authors": [
+        {
+            "name": "Thomas Tourlourat",
+            "email": "thomas@tourlourat.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": ">=2.0",
+        "doctrine/orm": ">=2.1"
+        
+    },
+    "autoload": {
+        "psr-0": { "Armetiz\\StatisticBundle": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "target-dir": "Armetiz/StatisticBundle"
+}

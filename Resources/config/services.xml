@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="armetiz.statistic.manager.consolidation.class">Armetiz\StatisticBundle\Manager\Consolidation</parameter>
+        <parameter key="armetiz.statistic.manager.tracker.class">Armetiz\StatisticBundle\Services\Statistic</parameter>
+        <parameter key="armetiz.statistic.entity.class">Armetiz\StatisticBundle\Entity\Event</parameter>
+    </parameters>
+    <services>
+        <service id="armetiz.statistic.manager.tracker" class="%armetiz.statistic.manager.tracker.class%">
+            <call method="setSecurityContext">
+                <argument type="service" id="security.context" />
+            </call>
+            <call method="setEntityManager">
+                <argument type="service" id="doctrine.orm.entity_manager" />
+            </call>
+            <call method="setDispatcher">
+                <argument type="service" id="event_dispatcher" />
+            </call>
+        </service>
+    </services>
+</container>

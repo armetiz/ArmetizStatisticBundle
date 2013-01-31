@@ -1,0 +1,5 @@
+==1.0.2==
+* Allow an empty category definition. Usefull to not plug a service behind the category.
+
+==1.0.1==
+* Fix ArmetizSystemBundle constructor.
