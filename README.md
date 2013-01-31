@@ -89,3 +89,7 @@ class HomeController extends Controller {
 }
 ?>       
 ```
+
+### Features
+- Store an event with this properties : category, action, created date, value, ip, username & support
+- An event is dispatch when a new event is stored : Armetiz\StatisticBundle\Event\TrackEvent::TRACK
